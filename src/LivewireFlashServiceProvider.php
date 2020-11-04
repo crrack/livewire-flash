@@ -24,7 +24,13 @@ class LivewireFlashServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->mergeConfigFrom(__DIR__. '/publish/livewire-flash.php', 'livewire-flash');
+
         $this->loadViewsFrom(__DIR__ . '/views', 'livewire-flash');
+
+        $this->publishes([
+            __DIR__ . '/publish' => config_path()
+        ]);
 
         Livewire::component('flash-container', \Crrack\LivewireFlash\Livewire\FlashContainer::class);
         Livewire::component('flash-messages', \Crrack\LivewireFlash\Livewire\FlashMessages::class);
