@@ -1,9 +1,17 @@
 # Laravel Flash Messages with livewire support
 ## Installation
 
-add before </body>
+install via composer
 
-```php
+```bash
+composer require crrack/livewire-flash
+```
+
+## Setup
+
+add before `</body>`
+
+```html
 <livewire:flash-container />
 ```
 
