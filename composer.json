@@ -1,0 +1,35 @@
+{
+    "name": "crrack/livewire-flash",
+    "description": "Flash messages using Livewire",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ondřej Štěpán",
+            "email": "o.stepan@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.0",
+        "illuminate/support": "^7.0|^8.0",
+        "livewire/livewire": "^1.2|^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Crrack\\LivewireFlash\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Crrack\\LivewireFlash\\LivewireFlashServiceProvider"
+            ]
+        }
+    }
+}
